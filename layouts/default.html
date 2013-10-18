@@ -1,29 +1,51 @@
 <!DOCTYPE HTML>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title><%= @item[:title] %></title>
-    <link rel="stylesheet" href="/style.css">
     <meta name="Description" content= "<%= tags %>">
     <!-- you don't need to keep this, but it's cool for stats! -->
     <meta name="generator" content="nanoc <%= Nanoc::VERSION %>"> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-responsive.css">
+
+
   </head>
+
   <body>
-    <div id="main">
-      <%= yield %>
+    <header class="container">
+      <%= render '/parts/topnav'  %>
+    </header>
+
+    <hr>
+
+    <div class="jumbotron">
+      <h1>Alejandro Mill&aacute;n</h1>
+      <p class="lead">Asesor de Seguros</p>
+      <a class="btn btn-large btn-success" href="#contact">Contactar</a>
     </div>
-    <div id="sidebar">
-      <h2>Documentation</h2>
-      <ul>
-        <li><a href="http://nanoc.ws/docs/">Documentation</a></li>
-        <li><a href="http://nanoc.ws/docs/tutorial/">Getting Started</a></li>
-      </ul>
-      <h2>Community</h2>
-      <ul>
-        <li><a href="http://groups.google.com/group/nanoc/">Discussion Group</a></li>
-        <li><a href="irc://chat.freenode.net/#nanoc">IRC Channel</a></li>
-        <li><a href="http://github.com/nanoc/nanoc/wiki/">Wiki</a></li>
-      </ul>
-    </div>
+
+    <%= yield%>
+
+
+    <section>
+      <footer class="container">
+         <div class="span12"> © 2013 Jesus Alejandro Millan.  
+         iconos tomados de<href src="glyphicons.com">glyphicons.com</href>
+         </div>
+      </footer>
+    </section>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js"></script>
+    <script src="assets/js/main.js"></script>
+
   </body>
 </html>
+
