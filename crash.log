@@ -1,8 +1,9 @@
-Crashlog created at 2013-10-18 11:29:07 +0200
+Crashlog created at 2014-01-06 21:34:59 +0100
 
 ===== MESSAGE:
 
-RuntimeError: Found 2 content files for content/assets/img/IMG_0292; expected 0 or 1
+LoadError: cannot load such file -- nokogiri
+Install the 'nokogiri' gem using `gem install nokogiri`.
 
 ===== COMPILATION STACK:
 
@@ -10,46 +11,40 @@ RuntimeError: Found 2 content files for content/assets/img/IMG_0292; expected 0 
 
 ===== STACK TRACE:
 
-  0. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/data_sources/filesystem.rb:164:in `block in all_split_files_in'
-  1. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/data_sources/filesystem.rb:154:in `each_pair'
-  2. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/data_sources/filesystem.rb:154:in `all_split_files_in'
-  3. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/data_sources/filesystem.rb:78:in `load_objects'
-  4. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/data_sources/filesystem.rb:37:in `items'
-  5. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/base/source_data/site.rb:325:in `block in load_items'
-  6. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/base/source_data/site.rb:324:in `each'
-  7. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/base/source_data/site.rb:324:in `load_items'
-  8. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/base/source_data/site.rb:243:in `load'
-  9. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/base/source_data/site.rb:127:in `layouts'
-  10. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/base/compilation/compiler.rb:187:in `dependency_tracker'
-  11. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/base/memoization.rb:56:in `block in memoize'
-  12. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/base/compilation/compiler.rb:457:in `stores'
-  13. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/base/compilation/compiler.rb:146:in `unload'
-  14. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/base/source_data/site.rb:274:in `unload'
-  15. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/base/source_data/site.rb:254:in `rescue in load'
-  16. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/base/source_data/site.rb:258:in `load'
-  17. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/cli/command_runner.rb:63:in `load_site'
-  18. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/cli/commands/compile.rb:358:in `run'
-  19. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/cli/command_runner.rb:14:in `block in call'
-  20. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
-  21. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
-  22. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/cli/command_runner.rb:13:in `call'
-  23. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.4.0/lib/cri/command_dsl.rb:185:in `block in runner'
-  24. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.4.0/lib/cri/command.rb:296:in `call'
-  25. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.4.0/lib/cri/command.rb:296:in `run_this'
-  26. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.4.0/lib/cri/command.rb:249:in `run'
-  27. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/cli/commands/nanoc.rb:39:in `block in define'
-  28. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.4.0/lib/cri/command.rb:296:in `call'
-  29. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.4.0/lib/cri/command.rb:296:in `run_this'
-  30. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.4.0/lib/cri/command.rb:249:in `run'
-  31. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/cli.rb:52:in `block in run'
-  32. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
-  33. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
-  34. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/cli.rb:50:in `run'
-  35. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/bin/nanoc:19:in `<top (required)>'
-  36. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/bin/nanoc:23:in `load'
-  37. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/bin/nanoc:23:in `<main>'
-  38. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/bin/ruby_executable_hooks:14:in `eval'
-  ... 41 more lines omitted. See full crash log for details.
+  0. /Users/rgalindo33/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/site_ruby/2.0.0/rubygems/core_ext/kernel_require.rb:51:in `require'
+  1. /Users/rgalindo33/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/site_ruby/2.0.0/rubygems/core_ext/kernel_require.rb:51:in `require'
+  2. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/extra/checking/checks/external_links.rb:5:in `<top (required)>'
+  3. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/base/plugin_registry.rb:210:in `const_get'
+  4. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/base/plugin_registry.rb:210:in `block in resolve'
+  5. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/base/plugin_registry.rb:209:in `each'
+  6. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/base/plugin_registry.rb:209:in `inject'
+  7. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/base/plugin_registry.rb:209:in `resolve'
+  8. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/base/memoization.rb:56:in `block in memoize'
+  9. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/base/plugin_registry.rb:163:in `block in find_all'
+  10. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/base/plugin_registry.rb:163:in `each_pair'
+  11. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/base/plugin_registry.rb:163:in `find_all'
+  12. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/base/plugin_registry.rb:78:in `all'
+  13. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/extra/checking/runner.rb:100:in `all_check_classes'
+  14. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/extra/checking/runner.rb:44:in `run_all'
+  15. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/cli/commands/check.rb:29:in `run'
+  16. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/cli/command_runner.rb:14:in `block in call'
+  17. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
+  18. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
+  19. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/cli/command_runner.rb:13:in `call'
+  20. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.4.0/lib/cri/command_dsl.rb:185:in `block in runner'
+  21. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.4.0/lib/cri/command.rb:296:in `call'
+  22. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.4.0/lib/cri/command.rb:296:in `run_this'
+  23. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.4.0/lib/cri/command.rb:249:in `run'
+  24. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.4.0/lib/cri/command.rb:262:in `run'
+  25. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/cli.rb:52:in `block in run'
+  26. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
+  27. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
+  28. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib/nanoc/cli.rb:50:in `run'
+  29. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/bin/nanoc:19:in `<top (required)>'
+  30. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/bin/nanoc:23:in `load'
+  31. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/bin/nanoc:23:in `<main>'
+  32. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/bin/ruby_executable_hooks:14:in `eval'
+  ... 35 more lines omitted. See full crash log for details.
 
 ===== VERSION INFORMATION:
 
@@ -58,31 +53,64 @@ Running ruby 2.0.0 (2013-06-27) on x86_64-darwin12.3.0 with RubyGems 2.0.6.
 
 ===== SYSTEM INFORMATION:
 
-Darwin naiguata.local 12.5.0 Darwin Kernel Version 12.5.0: Mon Jul 29 16:33:49 PDT 2013; root:xnu-2050.48.11~1/RELEASE_X86_64 x86_64
+Darwin naiguata.local 13.0.0 Darwin Kernel Version 13.0.0: Thu Sep 19 22:22:27 PDT 2013; root:xnu-2422.1.72~6/RELEASE_X86_64 x86_64
 
 ===== INSTALLED GEMS:
 
+  actionmailer 3.2.14, 4.0.0
+  actionpack 3.2.14, 4.0.0
+  activemodel 3.2.14, 4.0.0
+  activerecord 3.2.14, 4.0.0
+  activerecord-deprecated_finders 1.0.3
+  activeresource 3.2.14
+  activesupport 3.2.14, 4.0.0
   adsf 1.1.1
+  arel 3.0.2, 4.0.0
+  atomic 1.1.14
+  builder 3.0.4, 3.1.4
   bundler 1.3.5
   bundler-unload 1.0.2
+  chunky_png 1.2.9
+  coderay 1.0.9
   colored 1.2
+  compass 0.12.2
   cri 2.4.0
+  erubis 2.7.0
   executable-hooks 1.2.1
+  fssm 0.2.10
+  hike 1.2.3
+  i18n 0.6.5
+  journey 1.0.4
+  mail 2.5.4
+  mime-types 1.25
+  minitest 4.7.5
+  multi_json 1.8.0, 1.8.2
   nanoc 3.6.5
+  polyglot 0.3.3
   powder 0.2.0
-  rack 1.5.2
+  rack 1.4.5, 1.5.2
+  rack-cache 1.2
+  rack-test 0.6.2
+  rails 4.0.0
+  railties 4.0.0
   rake 10.1.0
   rubygems-bundler 1.3.2
   rvm 1.11.3.8
   sass 3.2.12
+  sprockets 2.2.2, 2.10.0
+  sprockets-rails 2.0.1
   thor 0.18.1
+  thread_safe 0.1.3
+  tilt 1.4.1
+  treetop 1.4.15
+  tzinfo 0.3.37, 0.3.38
 
 ===== ENVIRONMENT:
 
-Apple_PubSub_Socket_Render => "/tmp/launch-CoaGuZ/Render"
-Apple_Ubiquity_Message => "/tmp/launch-DatFU8/Apple_Ubiquity_Message"
+Apple_PubSub_Socket_Render => "/tmp/launch-hCQPcX/Render"
 COLORFGBG => "7;0"
 COMMAND_MODE => "unix2003"
+DESTINATION => "/var/folders/kl/bgvkc5yj3yd1hmrxb0k2l8zc0000gn/T/iTerm 1.0.0.20131124 Update"
 GEM_HOME => "/Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247"
 GEM_PATH => "/Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247:/Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247@global"
 GREP_COLOR => "1;32"
@@ -90,20 +118,21 @@ GREP_OPTIONS => "--color=auto"
 HOME => "/Users/rgalindo33"
 IRBRC => "/Users/rgalindo33/.rvm/rubies/ruby-2.0.0-p247/.irbrc"
 ITERM_PROFILE => "Default"
-ITERM_SESSION_ID => "w0t1p0"
+ITERM_SESSION_ID => "w0t2p2"
 LC_CTYPE => ""
 LESS => "-R"
 LOGNAME => "rgalindo33"
 LSCOLORS => "Gxfxcxdxbxegedabagacad"
 MY_RUBY_HOME => "/Users/rgalindo33/.rvm/rubies/ruby-2.0.0-p247"
-OLDPWD => "/Users/rgalindo33/Developer/jamillan/content"
+OLDPWD => "/Users/rgalindo33/Developer"
 PAGER => "less"
-PATH => "/Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/bin:/Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/rgalindo33/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/rgalindo33/.rvm/bin:/Users/rgalindo33/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/mysql/bin:/Users/rgalindo33/bin"
+PATH => "/Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/bin:/Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/rgalindo33/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/rgalindo33/.rvm/bin:/usr/local/heroku/bin:/Users/rgalindo33/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/mysql/bin:/Users/rgalindo33/bin"
 PWD => "/Users/rgalindo33/Developer/jamillan"
 RUBY_VERSION => "ruby-2.0.0-p247"
+SECURITYSESSIONID => "186a5"
 SHELL => "/bin/zsh"
 SHLVL => "1"
-SSH_AUTH_SOCK => "/tmp/launch-Opwnba/Listeners"
+SSH_AUTH_SOCK => "/tmp/launch-kerrWX/Listeners"
 TERM => "xterm-256color"
 TERM_PROGRAM => "iTerm.app"
 TMPDIR => "/var/folders/kl/bgvkc5yj3yd1hmrxb0k2l8zc0000gn/T/"
@@ -111,11 +140,11 @@ USER => "rgalindo33"
 _ => "/Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/bin/nanoc"
 _ORIGINAL_GEM_PATH => "/Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247:/Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247@global"
 __CF_USER_TEXT_ENCODING => "0x1F5:0:0"
+__CHECKFIX1436934 => "1"
 _system_arch => "x86_64"
 _system_name => "OSX"
 _system_type => "Darwin"
-_system_version => "10.8"
-install_flag => "1"
+_system_version => "10.9"
 rvm_alias_expanded => ""
 rvm_bin_path => "/Users/rgalindo33/.rvm/bin"
 rvm_docs_type => ""
@@ -127,7 +156,6 @@ rvm_path => "/Users/rgalindo33/.rvm"
 rvm_prefix => "/Users/rgalindo33"
 rvm_proxy => ""
 rvm_quiet_flag => ""
-rvm_recommended_ruby => "rvm install ruby-1.9.3-p448"
 rvm_ruby_file => ""
 rvm_ruby_make => ""
 rvm_ruby_make_install => ""
@@ -144,7 +172,7 @@ rvm_wrapper_name => ""
   1. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247@global/gems/executable-hooks-1.2.1/lib
   2. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247@global/gems/bundler-unload-1.0.2/lib
   3. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247@global/gems/rubygems-bundler-1.3.2/lib
-  4. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247@global/gems/bundler-1.3.5/lib
+  4. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/bundler-1.3.5/lib
   5. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/colored-1.2/lib
   6. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.4.0/lib
   7. /Users/rgalindo33/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.5/lib
